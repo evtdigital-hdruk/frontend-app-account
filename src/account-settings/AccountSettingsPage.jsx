@@ -609,18 +609,7 @@ class AccountSettingsPage extends React.Component {
           />
           {this.renderSecondaryEmailField(editableFieldProps)}
           <ResetPassword email={this.props.formValues.email} />
-          {(!getConfig().ENABLE_COPPA_COMPLIANCE)
-            && (
-            <EditableSelectField
-              name="year_of_birth"
-              type="select"
-              label={this.props.intl.formatMessage(messages['account.settings.field.dob'])}
-              emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.dob.empty'])}
-              value={this.props.formValues.year_of_birth}
-              options={yearOfBirthOptions}
-              {...editableFieldProps}
-            />
-            )}
+          
           <EditableSelectField
             name="country"
             type="select"
@@ -668,15 +657,6 @@ class AccountSettingsPage extends React.Component {
               : educationLevelOptions}
             label={this.props.intl.formatMessage(messages['account.settings.field.education'])}
             emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.education.empty'])}
-            {...editableFieldProps}
-          />
-          <EditableSelectField
-            name="gender"
-            type="select"
-            value={this.props.formValues.gender}
-            options={genderOptions}
-            label={this.props.intl.formatMessage(messages['account.settings.field.gender'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.gender.empty'])}
             {...editableFieldProps}
           />
           <EditableSelectField
