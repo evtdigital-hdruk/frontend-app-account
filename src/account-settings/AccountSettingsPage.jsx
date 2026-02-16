@@ -51,6 +51,7 @@ import {
 import { fetchSiteLanguages } from './site-language';
 import { fetchCourseList } from '../notification-preferences/data/thunks';
 import { withLocation, withNavigate } from './hoc';
+import AdditionalProfileFieldsSlot from '../plugin-slots/AdditionalProfileFieldsSlot';
 
 class AccountSettingsPage extends React.Component {
   constructor(props, context) {
@@ -695,6 +696,8 @@ class AccountSettingsPage extends React.Component {
             emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.language.proficiencies.empty'])}
             {...editableFieldProps}
           />
+
+          <AdditionalProfileFieldsSlot />
         </div>
         <div className="account-section pt-3 mb-5" id="social-media">
           <h2 className="section-heading h4 mb-3">
