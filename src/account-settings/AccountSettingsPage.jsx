@@ -468,6 +468,7 @@ class AccountSettingsPage extends React.Component {
 
     // Show State field only if the country is US (could include Canada later)
     const showState = this.props.formValues.country === COUNTRY_WITH_STATES;
+    const hiddenFields = getConfig().ACCOUNT_SETTINGS_HIDDEN_FIELDS || [];
     const { verifiedName } = this.props;
 
     const hasWorkExperience = !!this.props.formValues?.extended_profile?.find(field => field.field_name === 'work_experience');
@@ -605,7 +606,7 @@ class AccountSettingsPage extends React.Component {
           />
           {this.renderSecondaryEmailField(editableFieldProps)}
           <ResetPassword email={this.props.formValues.email} />
-          {(!getConfig().ENABLE_COPPA_COMPLIANCE)
+          {!hiddenFields.includes('year_of_birth') && !getConfig().ENABLE_COPPA_COMPLIANCE
             && (
             <EditableSelectField
               name="year_of_birth"
@@ -666,15 +667,18 @@ class AccountSettingsPage extends React.Component {
             emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.education.empty'])}
             {...editableFieldProps}
           />
-          <EditableSelectField
-            name="gender"
-            type="select"
-            value={this.props.formValues.gender}
-            options={genderOptions}
-            label={this.props.intl.formatMessage(messages['account.settings.field.gender'])}
-            emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.gender.empty'])}
-            {...editableFieldProps}
-          />
+          {!hiddenFields.includes('gender')
+            && (
+            <EditableSelectField
+              name="gender"
+              type="select"
+              value={this.props.formValues.gender}
+              options={genderOptions}
+              label={this.props.intl.formatMessage(messages['account.settings.field.gender'])}
+              emptyLabel={this.props.intl.formatMessage(messages['account.settings.field.gender.empty'])}
+              {...editableFieldProps}
+            />
+            )}
           {hasWorkExperience
           && (
           <EditableSelectField
