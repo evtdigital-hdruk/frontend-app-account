@@ -20,19 +20,9 @@ exports[`DeleteAccount should match default section snapshot 1`] = `
     You may also lose access to verified certificates and other program credentials. You can make a copy of these for your records before proceeding with deletion.
   </p>
   <p
-    className="text-danger h6"
+    className="text-danger h6 mb-3"
   >
     Warning: Account deletion is permanent. Please read the above carefully before proceeding. This is an irreversible action, and you will no longer be able to use the same email on localhost.
-  </p>
-  <p>
-    <a
-      className="pgn__hyperlink default-link standalone-link"
-      href="https://support.edx.org/hc/en-us/sections/115004139268-Manage-Your-Account-Settings"
-      onClick={[Function]}
-      target="_self"
-    >
-      Want to change your email, name, or password instead?
-    </a>
   </p>
   <p>
     <button
@@ -67,19 +57,9 @@ exports[`DeleteAccount should match unverified account section snapshot 1`] = `
     You may also lose access to verified certificates and other program credentials. You can make a copy of these for your records before proceeding with deletion.
   </p>
   <p
-    className="text-danger h6"
+    className="text-danger h6 mb-3"
   >
     Warning: Account deletion is permanent. Please read the above carefully before proceeding. This is an irreversible action, and you will no longer be able to use the same email on localhost.
-  </p>
-  <p>
-    <a
-      className="pgn__hyperlink default-link standalone-link"
-      href="https://support.edx.org/hc/en-us/sections/115004139268-Manage-Your-Account-Settings"
-      onClick={[Function]}
-      target="_self"
-    >
-      Want to change your email, name, or password instead?
-    </a>
   </p>
   <p>
     <button
@@ -149,19 +129,9 @@ exports[`DeleteAccount should match unverified account section snapshot 2`] = `
     You may also lose access to verified certificates and other program credentials. You can make a copy of these for your records before proceeding with deletion.
   </p>
   <p
-    className="text-danger h6"
+    className="text-danger h6 mb-3"
   >
     Warning: Account deletion is permanent. Please read the above carefully before proceeding. This is an irreversible action, and you will no longer be able to use the same email on localhost.
-  </p>
-  <p>
-    <a
-      className="pgn__hyperlink default-link standalone-link"
-      href="https://support.edx.org/hc/en-us/sections/115004139268-Manage-Your-Account-Settings"
-      onClick={[Function]}
-      target="_self"
-    >
-      Want to change your email, name, or password instead?
-    </a>
   </p>
   <p>
     <button

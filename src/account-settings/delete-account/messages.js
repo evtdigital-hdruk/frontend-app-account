@@ -36,11 +36,6 @@ const messages = defineMessages({
     defaultMessage: 'Warning: Account deletion is permanent. Please read the above carefully before proceeding. This is an irreversible action, and you will no longer be able to use the same email on {siteName}.',
     description: 'A message in the user account deletion area',
   },
-  'account.settings.delete.account.text.change.instead': {
-    id: 'account.settings.delete.account.text.change.instead',
-    defaultMessage: 'Want to change your email, name, or password instead?',
-    description: 'A message in the user account deletion area',
-  },
   'account.settings.delete.account.button': {
     id: 'account.settings.delete.account.button',
     defaultMessage: 'Delete My Account',
