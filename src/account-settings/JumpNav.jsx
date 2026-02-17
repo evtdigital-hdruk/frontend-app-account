@@ -23,11 +23,11 @@ const JumpNav = ({
         items={[
           'basic-information',
           'profile-information',
-          'marketing-preferences',
+          ...(getConfig().ENABLE_MARKETING_PREFERENCES ? ['marketing-preferences'] : []),
           'social-media',
           'site-preferences',
           'linked-accounts',
-          'delete-account',
+          ...(getConfig().ENABLE_ACCOUNT_DELETION ? ['delete-account'] : []),
         ]}
         className="list-unstyled"
         currentClassName="font-weight-bold"
@@ -42,11 +42,14 @@ const JumpNav = ({
             {intl.formatMessage(messages['account.settings.section.profile.information'])}
           </NavHashLink>
         </li>
-        <li>
-          <NavHashLink to="#marketing-preferences">
-            {intl.formatMessage(messages['account.settings.section.marketing.preferences'])}
-          </NavHashLink>
-        </li>
+        {getConfig().ENABLE_MARKETING_PREFERENCES
+          && (
+          <li>
+            <NavHashLink to="#marketing-preferences">
+              {intl.formatMessage(messages['account.settings.section.marketing.preferences'])}
+            </NavHashLink>
+          </li>
+          )}
         <li>
           <NavHashLink to="#social-media">
             {intl.formatMessage(messages['account.settings.section.social.media'])}

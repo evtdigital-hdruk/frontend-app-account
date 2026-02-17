@@ -74,6 +74,7 @@ initialize({
         PASSWORD_RESET_SUPPORT_LINK: process.env.PASSWORD_RESET_SUPPORT_LINK,
         LEARNER_FEEDBACK_URL: process.env.LEARNER_FEEDBACK_URL,
         ACCOUNT_SETTINGS_HIDDEN_FIELDS: (process.env.ACCOUNT_SETTINGS_HIDDEN_FIELDS || []),
+        ENABLE_MARKETING_PREFERENCES: (process.env.ENABLE_MARKETING_PREFERENCES || false),
       }, 'App loadConfig override handler');
     },
   },
